@@ -133,7 +133,6 @@ function setDefault() {
 		allPwrBtn[i].selectedIndex = "3";
 	}
 	for(i = 0; i<allSlpBtn.length; i++){
-		allSlpBtn[i].selectedIndex = "
-1";
+		allSlpBtn[i].selectedIndex = "1";
 	}
 }
