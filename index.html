@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +19,8 @@ details {
 }
 details>summary {
     font-size: 1.2em;
-    list-style-type: '⊞';
 }
 details[open] > summary {
-    list-style-type: '⊟';
 }
 select {
     display: inline-block;
@@ -37,9 +36,27 @@ input {
 	margin-left:1em;
 	}
 button {
-	display: inline-block;
-    width: 8em;
-	margin-left:1em;
+    display: inline-block;
+    width: 15em;
+    margin-left: 1em;
+    padding: 0.5em;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: #333333;
+    border: none;
+    color: white;
+    box-sizing: border-box;
+}
+button:hover {
+    outline: 2px solid #858585;
+    outline-offset: -2px;
+}
+
+button:active {
+    outline: 1px solid #333333;
+    outline-offset: -1px;
+    background-color: #666666;
+    transform: scale(0.99);
 }
 label {
 	display: inline-block;
@@ -50,7 +67,8 @@ label.cblabel {
     width: auto;
     padding-top: 5px;
     display: block;
-}
+	}
+
 input[type="checkbox"] {
     filter: invert(1) hue-rotate(180deg);
     margin: 5px;
@@ -168,14 +186,14 @@ input[type="checkbox"] {
             </select>
         <br>
         <label>When I press the sleep button</label>
-            <select  class="pwrBtn">
+            <select  class="slpBtn">
                 <option>Do nothing</option>
                 <option>Sleep</option>
                 <option>Hibernate</option>
                 <option>Shut down</option>
                 <option>Turn off the display</option>
             </select>
-            <select  class="pwrBtn">
+            <select  class="slpBtn">
                 <option>Do nothing</option>
                 <option>Sleep</option>
                 <option>Hibernate</option>
@@ -267,7 +285,7 @@ input[type="checkbox"] {
     <details>
         <summary>Preset settings</summary>
 		<label>Current Plan: </label>
-		<label id="plan"></label>
+		<label id="plan"> Default </label>
 		<br>
         <label>Set to balance settings</label>
         <button id="balanceBtn">Change</button>
@@ -277,7 +295,11 @@ input[type="checkbox"] {
         <br>
         <label>Set to power saver settings</label>
         <button id="saverBtn">Change</button>
+		<br>
+		<label></label>
+		<button id="revert">Undo Change</button>
     </details>
+	<button style="width: 10em;" onclick="window.open('https://support.microsoft.com/en-us/windows/how-to-adjust-power-and-sleep-settings-in-windows-26f623b5-4fcc-4194-863d-b824e5ea7679', '_blank');"> help </button>
 </body>
  <script src="script.js"></script> 
 </html>
